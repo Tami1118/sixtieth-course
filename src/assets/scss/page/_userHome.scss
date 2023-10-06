@@ -1,0 +1,11 @@
+.home-banner-img{
+  // background-image: url("https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+  background-image: url("https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80");
+  background-position: 50% 10%;
+  background-size: cover;
+  height: 400px;
+
+  @include media-breakpoint-up(lg){
+    height: 600px;
+  }
+}

@@ -1,0 +1,22 @@
+.nav-btn-link{
+  position: relative;
+  
+  &:active,
+  &:focus{
+    color: $primary;
+
+    &:after{
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: $primary;
+      border-radius: 50%;
+      position: absolute;
+      top: 120%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
