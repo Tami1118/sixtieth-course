@@ -129,7 +129,8 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  // margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: 0; // *custom
 }
 
 
@@ -244,9 +245,10 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
-  // text-decoration: $link-decoration;
-  text-decoration: none; // *custom
+  // color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
+  color: $gray-700; // *custom
+  text-decoration: $link-decoration;
+  // text-decoration: none; // *custom
 
   &:hover {
     --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);

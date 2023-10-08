@@ -51,6 +51,14 @@ const routes = [
         component: () => import('../views/frontEnd/TestView.vue')
         // children: [{}]
       },
+      {
+        path: '/login',
+        component: () => import('../views/frontEnd/LoginView.vue')
+      },
+      {
+        path: '/signin',
+        component: () => import('../views/frontEnd/SignView.vue')
+      },
     ]
   },
   {

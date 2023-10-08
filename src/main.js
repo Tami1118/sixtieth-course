@@ -11,6 +11,21 @@ import router from './router';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 
+import { Field, Form, ErrorMessage, defineRule, configure } from 'vee-validate'
+import * as rules from '@vee-validate/rules';
+import { localize, setLocale } from '@vee-validate/i18n'
+import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
+
+Object.keys(rules).forEach(rule => {
+  defineRule(rule, rules[rule]);
+});
+
+// 設定 vee validation 全域規則
+configure({
+  generateMessage: localize({ zh_TW: zhTW }), // 繁體中文語系
+  validateOnInput: false, // 輸入同時驗證
+});
+setLocale('zh_TW'); // 設定預設語系
 
 
 // Import the functions you need from the SDKs you need
@@ -40,8 +55,11 @@ initializeApp(firebaseConfig);
 
 const app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
-app.use(VueAxios, axios);
+app.use(createPinia())
+app.use(router)
+app.use(VueAxios, axios)
+app.component('VForm', Form)
+app.component('VField', Field)
+app.component('ErrorMessage', ErrorMessage)
 
 app.mount('#app');

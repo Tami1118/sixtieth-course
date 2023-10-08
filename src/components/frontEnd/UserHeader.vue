@@ -25,7 +25,8 @@
             <RouterLink to="/test" class="nav-link nav-btn-link">測試頁面</RouterLink>
           </li>
         </ul>
-        <a href="#" class="btn btn-outline-success">Search</a>
+
+        <RouterLink to="/login" class="btn btn-primary text-white">會員登入</RouterLink>
       </div>
 
       <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>

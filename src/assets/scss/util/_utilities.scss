@@ -41,7 +41,11 @@ $utilities: map-merge(
       values: (
         top: top,
         center: center,
+        bottom: bottom,
         10: 50% 10%,
+        20: 50% 20%,
+        30: 50% 30%,
+        40: 50% 40%,
       )
     ),
     // scss-docs-end utils-object-fit
@@ -93,6 +97,8 @@ $utilities: map-merge(
         sm: var(--#{$prefix}box-shadow-sm),
         lg: var(--#{$prefix}box-shadow-lg),
         none: none,
+        gray: 6px 7px 0px $gray-200,
+        primary: 3px 5px 0px $green-dark,
       )
     ),
     // scss-docs-end utils-shadow
@@ -751,11 +757,11 @@ $utilities: map-merge(
         5: var(--#{$prefix}border-radius-xxl),
         circle: 50%,
         pill: var(--#{$prefix}border-radius-pill),
-        10px: 10px, // *custom
-        20px: 20px,
-        30px: 30px,
-        40px: 40px,
-        50px: 50px,
+        10: 10px, // *custom
+        20: 20px,
+        30: 30px,
+        40: 40px,
+        50: 50px,
         bottom-120: 0 0 120px 120px,
         top-10: 10px 10px 0 0,
         top-right-10: 10px 0 10px 0,
