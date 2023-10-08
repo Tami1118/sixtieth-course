@@ -42,7 +42,7 @@
         <div class="col-lg-6 d-none d-lg-block">
           <div class="row justify-content-center">
             <div class="col-10">
-              <img src="../../assets/image/elderly people.png" alt="elderly people" />
+              <img src="../../assets/image/elderly-people.png" alt="elderly people" />
             </div>
           </div>
         </div>
