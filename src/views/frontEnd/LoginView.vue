@@ -52,21 +52,6 @@
   </div>
 </template>
 
-<style lang="scss">
-  .orLine::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    display: block;
-    background: #ced4da;
-    margin: auto;
-    z-index: -1;
-  }
-</style>
 
 <script>
 import { RouterLink } from 'vue-router'
