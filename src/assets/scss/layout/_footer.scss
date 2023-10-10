@@ -1,0 +1,7 @@
+.footer-logo{
+  height: 64px;
+
+  @include media-breakpoint-up(lg){
+    height: 80px;
+  }
+}

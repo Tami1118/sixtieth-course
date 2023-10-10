@@ -1,0 +1,7 @@
+.header-logo{
+  height: 48px;
+
+  @include media-breakpoint-up(lg){
+    height: 60px;
+  }
+}
