@@ -463,6 +463,7 @@ $spacers: (
   19: $spacer * 4.75,   // 76px
   20: $spacer * 5,      // 80px
   24: $spacer * 6,      // 96px
+  26: $spacer * 6.5,      // 96px
   40: $spacer * 10,     // 160px
   50: $spacer * 12.5,     // 200px
 ); // *custom
@@ -813,34 +814,42 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
+// $table-cell-padding-y:        .5rem !default;
+$table-cell-padding-y:        .75rem; // *custom
 $table-cell-padding-x:        .5rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
 
 $table-cell-vertical-align:   top !default;
 
-$table-color:                 var(--#{$prefix}emphasis-color) !default;
+// $table-color:                 var(--#{$prefix}emphasis-color) !default;
+$table-color:                 $gray-700; // *custom
 $table-bg:                    var(--#{$prefix}body-bg) !default;
 $table-accent-bg:             transparent !default;
 
-$table-th-font-weight:        null !default;
+// $table-th-font-weight:        null !default;
+$table-th-font-weight:        500; // *custom
 
 $table-striped-color:         $table-color !default;
-$table-striped-bg-factor:     .05 !default;
-$table-striped-bg:            rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor) !default;
+// $table-striped-bg-factor:     .05 !default;
+$table-striped-bg-factor:     .25; // *custom
+// $table-striped-bg:            rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor) !default;
+$table-striped-bg:            rgba($gray-400, $table-striped-bg-factor); // *custom
 
 $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
 $table-active-bg:             rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor) !default;
 
 $table-hover-color:           $table-color !default;
-$table-hover-bg-factor:       .075 !default;
-$table-hover-bg:              rgba(var(--#{$prefix}emphasis-color-rgb), $table-hover-bg-factor) !default;
+// $table-hover-bg-factor:       .075 !default;
+$table-hover-bg-factor:       .5; // *custom
+// $table-hover-bg:              rgba(var(--#{$prefix}emphasis-color-rgb), $table-hover-bg-factor) !default;
+$table-hover-bg:              $gray-200; // *custom
 
 $table-border-factor:         .2 !default;
 $table-border-width:          var(--#{$prefix}border-width) !default;
-$table-border-color:          var(--#{$prefix}border-color) !default;
+// $table-border-color:          var(--#{$prefix}border-color) !default;
+$table-border-color:          $gray-400; // *custom
 
 $table-striped-order:         odd !default;
 $table-striped-columns-order: even !default;
@@ -854,7 +863,8 @@ $table-bg-scale:              -80% !default;
 
 // scss-docs-start table-loop
 $table-variants: (
-  "primary":    shift-color($primary, $table-bg-scale),
+  // "primary":    shift-color($primary, $table-bg-scale),
+  "primary":    $primary,
   "secondary":  shift-color($secondary, $table-bg-scale),
   "success":    shift-color($success, $table-bg-scale),
   "info":       shift-color($info, $table-bg-scale),
@@ -862,7 +872,21 @@ $table-variants: (
   "danger":     shift-color($danger, $table-bg-scale),
   "light":      $light,
   "dark":       $dark,
-) !default;
+  "green":       $green,
+  "green-light":       $green-light,
+  "green-dark":       $green-dark,
+  "blue":       $blue,
+  "yellow":       $yellow,
+  "gray-900":    $gray-900,
+  "gray-800":    $gray-800,
+  "gray-700":    $gray-700,
+  "gray-600":    $gray-600,
+  "gray-500":    $gray-500,
+  "gray-400":    $gray-400,
+  "gray-300":    $gray-300,
+  "gray-200":    $gray-200,
+  "gray-100":    $gray-100,
+); // *custom
 // scss-docs-end table-loop
 
 
@@ -1000,7 +1024,8 @@ $input-border-radius:                   10px; // *custom
 $input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
 $input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
-$input-focus-bg:                        $input-bg !default;
+// $input-focus-bg:                        $input-bg !default;
+$input-focus-bg:                        white; // *custom
 $input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;

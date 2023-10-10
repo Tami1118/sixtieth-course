@@ -248,7 +248,7 @@ a {
   // color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   color: $gray-700; // *custom
   text-decoration: $link-decoration;
-  // text-decoration: none; // *custom
+  text-decoration: none; // *custom
 
   &:hover {
     --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);

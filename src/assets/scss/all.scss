@@ -37,6 +37,8 @@
 // 8. Add additional custom code here
 @import './base/base';
 @import './components/nav';
+@import './layout/header';
+@import './layout/footer';
 @import './page/login';
 @import './page/userHome';
 @import './page/test';

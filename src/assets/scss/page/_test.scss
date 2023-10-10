@@ -1,15 +1,61 @@
-.card-course-img{
+.card-course-img {
   height: 296px;
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     height: 272px;
   }
 }
 
-.img-cover{
+.logo-title{
+  font-family: 'jf-openhuninn';
+}
+
+.img-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
+.table {
+  a {
+    text-decoration: none;
+  }
+
+  tr:hover {
+    a {
+      color: #c53838;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    /* 隱藏thead */
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      position: absolute;
+    }
+
+    /* tr, td 設定block獨立單行 */
+    tr {
+      display: block;
+    }
+    td {
+      display: block;
+    }
+
+    td::before {
+      content: attr(data-label); /*綁定屬性質*/
+      float: left;
+      font-weight: bold;
+      display: block;
+    }
+  }
+}
