@@ -1,0 +1,1 @@
+import{_ as e,o as c,c as t,a as o}from"./index-20289a59.js";const s={},n=o("h1",null," 我是購物車確認 ",-1),a=[n];function r(_,l){return c(),t("div",null,a)}const f=e(s,[["render",r]]);export{f as default};
