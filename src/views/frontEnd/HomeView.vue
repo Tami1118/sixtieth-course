@@ -2,6 +2,9 @@
   <main>
     <div class="rounded-bottom-120">
       <div class="container">
+        <div class="rounded-20" style="height: 520px;">
+          <img src="../../assets/image/elderly-people-2.png" style="width: 500px" alt="">
+        </div>
         <!-- 標題 -->
         <!-- 搜尋功能 -->
       </div>
