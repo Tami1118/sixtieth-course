@@ -1,6 +1,8 @@
 <template>
   <UserHeader></UserHeader>
-  <RouterView></RouterView>
+  <div class="mt-24 mt-lg-26">
+    <RouterView></RouterView>
+  </div>
   <UserFooter></UserFooter>
 </template>
 
