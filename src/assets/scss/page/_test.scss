@@ -17,7 +17,7 @@
   object-position: center;
 }
 
-.table {
+.course-table {
   a {
     text-decoration: none;
   }
@@ -58,4 +58,25 @@
       display: block;
     }
   }
+}
+
+.weekly-table{
+  h3{
+    color: #009389;
+  }
+  .card:hover{
+    background-color: #009389;
+    a, h3{
+      color: white;
+    }
+  }
+}
+
+.banner-img{
+  background-image: url('../../assets/image/banner.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 20px;
 }

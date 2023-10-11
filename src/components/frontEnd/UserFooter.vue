@@ -24,8 +24,9 @@
                   <li class="nav-item">
                     <RouterLink to="/course" class="nav-link nav-btn-link">開辦一覽</RouterLink>
                   </li>
+
                   <li class="nav-item">
-                    <RouterLink to="/news" class="nav-link nav-btn-link">最新消息</RouterLink>
+                    <RouterLink to="/login" class="nav-link nav-btn-link">學員登入</RouterLink>
                   </li>
                 </ul>
               </div>
@@ -45,6 +46,9 @@
                 <ul class="d-flex flex-column gap-2">
                   <li class="nav-item">
                     <RouterLink to="/about" class="nav-link nav-btn-link">關於我們</RouterLink>
+                  </li>
+                  <li class="nav-item">
+                    <RouterLink to="/news" class="nav-link nav-btn-link">最新消息</RouterLink>
                   </li>
                   <li class="nav-item">
                     <RouterLink to="/faq" class="nav-link nav-btn-link">常見問題</RouterLink>

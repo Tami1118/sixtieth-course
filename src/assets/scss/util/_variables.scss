@@ -57,6 +57,7 @@ $yellow:  #fff371; // *custom
 $green:   #009389; // *custom
 $green-dark:   #00544F; // *custom
 $green-light:  #d5f2e7; // *custom
+// $green-light:  #f0fef9; // *custom
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
@@ -1112,7 +1113,8 @@ $input-group-addon-border-color:        $input-border-color !default;
 // scss-docs-end input-group-variables
 
 // scss-docs-start form-select-variables
-$form-select-padding-y:             $input-padding-y !default;
+// $form-select-padding-y:             $input-padding-y !default;
+$form-select-padding-y:             8px; // *custom
 $form-select-padding-x:             $input-padding-x !default;
 $form-select-font-family:           $input-font-family !default;
 $form-select-font-size:             $input-font-size !default;

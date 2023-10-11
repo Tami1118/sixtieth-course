@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="my-6">
-      <h2 class="fs-8 pb-4 border-bottom mb-4">Color</h2>
+    <div class="my-12">
+      <h2 class="fs-8 pb-2 border-bottom mb-4">Color</h2>
       <div class="my-4 d-flex flex-wrap gap-4">
         <div class="bg-primary rounded-4" style="height: 120px; width: 180px"></div>
         <div class="bg-green-dark rounded-4" style="height: 120px; width: 180px"></div>
@@ -26,8 +26,8 @@
         <div class="bg-gray-100 rounded-4" style="height: 120px; width: 180px"></div>
       </div>
     </div>
-    <div class="my-6">
-      <h2 class="fs-8 pb-4 border-bottom mb-4">Typography</h2>
+    <div class="my-12">
+      <h2 class="fs-8 pb-2 border-bottom mb-4">Typography</h2>
       <h1 class="h1">思源黑體 This is content.</h1>
       <h2 class="h2">思源黑體 This is content.</h2>
       <h3 class="h3">思源黑體 This is content.</h3>
@@ -42,8 +42,8 @@
       <p class="fs-5">思源黑體 This is content.</p>
       <p class="fs-4">思源黑體 This is content.</p>
     </div>
-    <div class="my-6">
-      <h2 class="fs-8 pb-4 border-bottom mb-4">Image</h2>
+    <div class="my-12">
+      <h2 class="fs-8 pb-2 border-bottom mb-4">Image</h2>
       <!-- <div class="row row-cols-1 row-cols-lg-3">
         <div class="col">
           <img src="../../assets/image/activity-analyze.png" alt="activity" />
@@ -110,8 +110,8 @@
 
     <!-- icon -->
     <!-- button -->
-    <div class="my-6">
-      <h2 class="fs-8 pb-4 border-bottom mb-4">Button</h2>
+    <div class="my-12">
+      <h2 class="fs-8 pb-2 border-bottom mb-4">Button</h2>
       <button class="btn rounded-5 btn-primary text-white fw-500">我是按鈕 Button</button>
       <button class="btn rounded-5 btn-primary text-white" @click="getData">取得資料</button>
     </div>
@@ -135,8 +135,8 @@
       3. 評鑑方式
     -->
 
-    <div class="my-6">
-      <h2 class="fs-8 pb-4 border-bottom mb-4">Card</h2>
+    <div class="my-12">
+      <h2 class="fs-8 pb-2 border-bottom mb-4">Card</h2>
 
       <!-- 課程狀態 -->
       <div class="mb-8">
@@ -201,7 +201,7 @@
       <!-- 功能：篩選(開課狀態、課程類型)、排序(開課時間、授課時間) -->
       <div class="mb-8">
         <h3 class="mb-3">課程列表</h3>
-        <table class="table table-hover table-striped table-bordered">
+        <table class="course-table table table-hover table-striped table-bordered">
           <thead class="table-green-dark">
             <tr class="text-center">
               <th scope="col">開課日期</th>
@@ -236,6 +236,129 @@
         </table>
       </div>
 
+      <!-- 課程 - 行事曆 -->
+      <!-- 欄位：開課單位、課程名稱、開課時間 -->
+      <div class="mb-8">
+        <h3 class="mb-3">課程週課表</h3>
+        <table class="weekly-table table table-hover table-bordered">
+          <thead class="table-green-dark">
+            <tr class="text-center">
+              <th scope="col"></th>
+              <th scope="col">星期一</th>
+              <th scope="col">星期二</th>
+              <th scope="col">星期三</th>
+              <th scope="col">星期四</th>
+              <th scope="col">星期五</th>
+              <th scope="col">星期六</th>
+              <th scope="col">星期日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="align-middle text-center">早上</td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
+                  <a href="#">
+                    <div class="p-3 text-center">
+                      <p class="mb-2">{{item.unit}}</p>
+                      <h3 class="fs-5">{{item.title}}</h3>
+                      <p>{{item.class_time}}</p>
+                    </div>
+                  </a>
+                </div>
+              </td>
+              
+            </tr>
+            <tr>
+              <td class="align-middle text-center">中午</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="align-middle text-center">晚上</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <!-- 單位 - 卡片 -->
       <!-- 欄位：單位圖片、單位名稱、單位地區、聯絡電話、電子信箱、網站連結 -->
       <div class="mb-8">
@@ -246,9 +369,9 @@
               <a class="d-block" href="#">
                 <div class="p-4">
                   <h3 class="fs-4 fs-lg-6 text-primary">{{ item.title }}</h3>
-                  <p>{{item.tel}}</p>
-                  <p>{{item.email}}</p>
-                  <p>{{item.city}}</p>
+                  <p>{{ item.tel }}</p>
+                  <p>{{ item.email }}</p>
+                  <p>{{ item.city }}</p>
                   <a href="#" class="btn btn-primary text-white">更多相關資訊</a>
                 </div>
               </a>
@@ -321,7 +444,7 @@
       </div>
     </div>
 
-    <div class="my-6">
+    <div class="my-12">
       <form action="">
         <div class="mb-2">
           <input type="text" class="form-control" />
@@ -384,7 +507,7 @@ export default {
       ],
       courseData: [
         {
-          title: '樂齡律動如果標題超過第一行不知道會怎麼樣',
+          title: '樂齡律動',
           type: '運動舞蹈',
           start_date: '2023/10/23',
           end_date: '2023/12/23',
