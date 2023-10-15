@@ -37,14 +37,16 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE__apiKey,
-  authDomain: import.meta.env.VITE__authDomain,
-  projectId: import.meta.env.VITE__projectId,
-  storageBucket: import.meta.env.VITE__storageBucket,
-  messagingSenderId: import.meta.env.VITE__messagingSenderId,
-  appId: import.meta.env.VITE__appId,
-  measurementId: import.meta.env.VITE__measurementId,
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+  measurementId: import.meta.env.VITE_measurementId,
 };
+
+console.log(firebaseConfig);
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
@@ -54,6 +56,9 @@ initializeApp(firebaseConfig);
 
 
 const app = createApp(App);
+
+
+
 
 app.use(createPinia())
 app.use(router)

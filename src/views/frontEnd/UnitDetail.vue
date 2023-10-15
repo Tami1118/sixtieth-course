@@ -43,7 +43,10 @@
                       <a :href="unit.youtube" class="btn btn-outline-light d-flex justify-content-center align-items-center rounded-circle" style="height: 36px; aspect-ratio: 1/1"><i class="bi bi-youtube"></i></a>
                     </div>
                     <div class="position-absolute end-0 top-0">
-                      <button class="btn btn-light text-primary"><i class="fi fi-sr-bookmark me-2"></i>關注中</button>
+                      <button class="btn btn-light text-primary" @click="is_sub = !is_sub">
+                        <span v-if="is_sub"><i class="fi fi-sr-bookmark me-2"></i>關注中</span>
+                        <span v-else><i class="fi fi-br-bookmark me-2"></i>未關注</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -266,6 +269,7 @@ export default {
   },
   data() {
     return {
+      is_sub: true,
       news: [
         {
           title: '小犬颱風停課公告',
@@ -300,7 +304,7 @@ export default {
         youtube: 'http://www.youtube.com',
         email: 'pccuteacher@gmail.com',
         address: '成都街30號',
-        logo: 'https://github.com/Tami1118/sixtieth-course/blob/main/src/assets/image/season_banner.png?raw=true',
+        logo: 'https://github.com/Tami1118/sixtieth-course/blob/main/src/assets/image/school.png?raw=true',
         map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.8614349981426!2d121.45901577522405!3d25.004823939466018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346802a6dc998ca1%3A0xc3a8f207d8ad4352!2zMjIw5paw5YyX5biC5p2_5qmL5Y2A5oiQ6YO96KGXMzDomZ8!5e0!3m2!1szh-TW!2stw!4v1697279417488!5m2!1szh-TW!2stw',
         intro:
           '板橋社區大學成立於1999年，是在民間發起第一波的知識文化運動浪潮下成立，本校長期投注於地方知識建構工作、關注社會公共議題、投入社區營造、社區藝術、提供終身學習資源，在多年耕耘下社大逐漸成為豐富的人文藝術學習與公民實踐場域。2007年，本校辦理瑞芳社大，成為新北市第一所跨越城鄉辦學的社大，陸續拓展範疇至平溪、雙溪、貢寮，打造城鄉共學平台，建構區域地方知識學中心。'
@@ -553,7 +557,7 @@ export default {
             }
           ]
         }
-      ]
+      ],
     }
   }
 }

@@ -260,9 +260,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -271,9 +271,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -282,9 +282,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -293,9 +293,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -304,9 +304,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -315,9 +315,9 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
@@ -326,14 +326,13 @@
                 <div class="card mb-2 rounded-3 overflow-hidden" v-for="item in courseData" :key="item.title">
                   <a href="#">
                     <div class="p-3 text-center">
-                      <p class="mb-2">{{item.unit}}</p>
-                      <h3 class="fs-5">{{item.title}}</h3>
-                      <p>{{item.class_time}}</p>
+                      <p class="mb-2">{{ item.unit }}</p>
+                      <h3 class="fs-5">{{ item.title }}</h3>
+                      <p>{{ item.class_time }}</p>
                     </div>
                   </a>
                 </div>
               </td>
-              
             </tr>
             <tr>
               <td class="align-middle text-center">中午</td>
@@ -451,16 +450,55 @@
         </div>
       </form>
     </div>
+
+    <button @click="signInWithGoogle">點我測試</button>
+    <button @click="updateCourse">點我測試</button>
   </div>
 </template>
 
 <script>
-import { doc, setDoc, getFirestore } from 'firebase/firestore'
+import { collection, addDoc, doc, setDoc, getFirestore } from 'firebase/firestore'
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 const db = getFirestore()
 
+const auth = getAuth()
 export default {
+  methods: {
+    async signInWithGoogle() {
+
+      const provider = new GoogleAuthProvider()
+      signInWithPopup(auth, provider)
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    async getData() {
+      console.log('我被執行')
+      await setDoc(doc(db, 'cities', 'LA'), {
+        name: 'Tami',
+        state: 'CO',
+        country: 'TW'
+      })
+    },
+    async postData() {
+      console.log('我被執行')
+      await setDoc(doc(db, 'course', 'post'), {
+        title: '樂齡課程',
+      })
+    },
+    async updateCourse() {
+      // const CoursesRef = doc(db, 'MusicTutorCourses', id)
+      await addDoc(collection(db, 'tami_test'), this.course)
+    },
+  },
   data() {
     return {
+      course: {
+        title: '樂齡課程',
+      },
       // courseType: ['社會科學類','自然科學類','資訊科技類','國際語文類','美術工藝類','表演藝術類','影像視覺類','運動舞蹈類','養身保健累','生活應用類','烹飪美食類','投資理財類','其他'],
       // unitType: ['社區大學', '樂齡大學', '樂齡學習中心', '長青學苑']
       unitData: [
@@ -550,16 +588,6 @@ export default {
           area: '板橋區'
         }
       ]
-    }
-  },
-  methods: {
-    async getData() {
-      console.log('我被執行')
-      await setDoc(doc(db, 'cities', 'LA'), {
-        name: 'Los Angeles',
-        state: 'CA',
-        country: 'USA'
-      })
     }
   }
 }
