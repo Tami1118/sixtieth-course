@@ -12,19 +12,28 @@ const routes = [
         component: () => import('../views/frontEnd/HomeView.vue')
       },
       {
-        path: 'faq',
-        // name: 'faq',
-        component: () => import('../views/frontEnd/FaqView.vue')
-      },
-      {
         path: 'course',
         // name: 'course',
         component: () => import('../views/frontEnd/CourseView.vue')
       },
       {
-        path: 'course/:id',
-        // name: 'course/:id',
+        path: 'course/course-detail',
+        // path: 'course/:id',
         component: () => import('../views/frontEnd/CourseDetail.vue')
+      },
+      {
+        path: '/unit',
+        component: () => import('../views/frontEnd/UnitView.vue')
+      },
+      {
+        path: '/unit/unit-detail',
+        // path: '/unit/:id',
+        component: () => import('../views/frontEnd/UnitDetail.vue')
+      },
+      {
+        path: 'faq',
+        // name: 'faq',
+        component: () => import('../views/frontEnd/FaqView.vue')
       },
       {
         path: 'news',
@@ -46,26 +55,26 @@ const routes = [
         // name: 'order-complete',
         component: () => import('../views/frontEnd/OrderComplete.vue')
       },
-      {
-        path: '/test',
-        component: () => import('../views/frontEnd/TestView.vue')
-        // children: [{}]
-      },
-      {
-        path: '/login',
-        component: () => import('../views/frontEnd/LoginView.vue')
-      },
-      {
-        path: '/signin',
-        component: () => import('../views/frontEnd/SignView.vue')
-      },
     ]
   },
   {
     path: '/admin',
     component: () => import('../views/BackEndView.vue')
     // children: [{}]
-  }
+  },
+  {
+    path: '/test',
+    component: () => import('../views/frontEnd/TestView.vue')
+    // children: [{}]
+  },
+  {
+    path: '/login',
+    component: () => import('../views/frontEnd/LoginView.vue')
+  },
+  {
+    path: '/signin',
+    component: () => import('../views/frontEnd/SignView.vue')
+  },
 ]
 
 const router = createRouter({

@@ -6,7 +6,7 @@
           <a href="#" class="d-flex align-items-center">
             <img class="me-2 header-logo" src="../../assets/image/logo.png" alt="花甲學院 logo" />
           </a>
-          <RouterLink to="/login" class="btn btn-primary shadow-primary text-white ms-auto order-lg-1">會員登入</RouterLink>
+          <RouterLink to="/login" class="btn btn-primary shadow-primary text-white ms-auto order-lg-1 rounded-20">會員登入</RouterLink>
 
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
                 <RouterLink to="/course" class="nav-link nav-btn-link">課程資訊</RouterLink>
               </li>
               <li class="nav-item">
-                <RouterLink to="/course" class="nav-link nav-btn-link">開辦一覽</RouterLink>
+                <RouterLink to="/unit" class="nav-link nav-btn-link">開辦一覽</RouterLink>
               </li>
               <li class="nav-item">
                 <RouterLink to="/news" class="nav-link nav-btn-link">最新消息</RouterLink>

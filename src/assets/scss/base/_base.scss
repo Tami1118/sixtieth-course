@@ -83,7 +83,8 @@ hr {
 
 %heading {
   margin-top: 0; // 1
-  margin-bottom: $headings-margin-bottom;
+  // margin-bottom: $headings-margin-bottom;
+  margin-bottom: 0; // *custom
   font-family: $headings-font-family;
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
@@ -346,7 +347,6 @@ svg {
 img{ // *custom
   max-width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 

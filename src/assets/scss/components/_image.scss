@@ -1,0 +1,21 @@
+/* img標籤預設 */
+.img-base{
+  overflow: hidden;
+
+  &>img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+/* hover */
+.img-hover-scale{
+  transform: scale(1);
+  transition: all 1s;
+  
+  &:hover{
+    transform: scale(1.2);
+  }
+}

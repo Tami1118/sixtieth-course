@@ -1,0 +1,19 @@
+.unit-banner{
+  background-image: url('../../assets/image/season_banner.png');
+  background-size: cover;
+  background-position: top;
+  min-height: 156px;
+
+  @include media-breakpoint-up(lg){
+    min-height: 216px;
+  }
+}
+
+.unit-logo{
+  height: 120px;
+  aspect-ratio: 1/1;
+
+  @include media-breakpoint-up(lg){
+    height: 156px;
+  }
+}

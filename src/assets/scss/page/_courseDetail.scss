@@ -1,0 +1,9 @@
+/* image */
+.course-detail-img{
+  height: 216px;
+
+  @include media-breakpoint-up(lg){
+    height: 356px;
+  }
+}
+
